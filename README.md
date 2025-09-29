@@ -19,3 +19,7 @@ QuickSort es un algoritmo de ordenación que usa Divide and Conquer.
 - **Mejor caso:** Θ(n log n)  
 - **Caso promedio:** Θ(n log n)  
 - **Peor caso:** O(n²) (cuando el pivote no se escoge bien)
+
+## Conclusiones
+
+El quicksort
