@@ -2,7 +2,7 @@
 
 Proyecto hecho por Alexis Raciel Ibarra Garnica y Pablo Natera Bravo
 
-Se hizo una comparativa entre el famoso algoritmo Quicksort y
+Se hizo una comparativa entre el famoso algoritmo Quicksort y BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
 
 
 ## Descripción
@@ -16,10 +16,10 @@ QuickSort es un algoritmo de ordenación que usa Divide and Conquer.
 
 
 ## Complejidad
-- **Mejor caso:** Θ(n log n)  
-- **Caso promedio:** Θ(n log n)  
-- **Peor caso:** O(n²) (cuando el pivote no se escoge bien)
+- **Mejor caso:** $\omega(n log n)$  
+- **Caso promedio:** $\theta (n log n) $
+- **Peor caso:** $O(n^2)$ (cuando el pivote no se escoge bien)
 
 ## Conclusiones
 
-El quicksort
+El quicksort es el mejor de los algoritmos de in-place dado que se escoga bien el pivote.

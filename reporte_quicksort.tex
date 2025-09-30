@@ -1,13 +1,13 @@
 \documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\IEEEoverridecommandlockouts% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage[utf8]{inputenc}   % soporte para acentos
-\usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage[pdftex]{hyperref}
+\usepackage{hyperref}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
@@ -34,7 +34,9 @@ pablonatera16@gmail.com}
 \maketitle
 
 \begin{abstract}
-In this paper we implemented QuickSort in C# along with BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
+In this paper we implemented QuickSort in C sharp along with other in-place sorting algorithms such as BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
+This with the intention of comparing performance while maintaining $O(1)$ spacial complexity.
+We concluded that of all the in-place sorting algorithms, QuickSort is the best option given that the pivot is chosen adequately.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -44,12 +46,17 @@ QuickSort, Divide and Conquer, Big O
 
 \section{Introducción}
 
+\subsection{Antecedentes Históricos}
 El algoritmo \textit{QuickSort}, fue desarrollado por Tony Hoare en 1959 mientras era estudiante de ciencias de la computación en la Universidad Estatal de Moscú, 
 surgió de la necesidad de ordenar listas de palabras para traducirlas del ruso al inglés. 
-Su propuesta superó en eficiencia al método de \textit{Insertion Sort}, introduciendo el concepto de particiones e implementándose inicialmente en Mercury Autocode. 
+Su propuesta superó en eficiencia al método de \textit{Insertion Sort}, haciendo uso del nuevo concepto de particiones e implementándose inicialmente en Mercury Autocode. 
+Posteriormente, al regresar a Inglaterra, Hoare adaptó su idea para mejorar el algoritmo de \textit{Shellsort}, lo que lo llevó a publicar QuickSort en 1961, y un año más tarde una versión mejorada. QuickSort está basado en el paradigma de \textit{Divide and Conquer}, creando particiones recursivas en el arreglo hasta llegar a un caso base. \cite{history} 
 
-Posteriormente, al regresar a Inglaterra, Hoare adaptó su idea para mejorar el algoritmo de \textit{Shellsort}, lo que lo llevó a publicar QuickSort en 1961, y un año más tarde una versión mejorada. QuickSort está basado en el paradigma de \textit{Divide and Conquer}, creando particiones recursivas en el arreglo hasta llegar a un caso base. 
+\subsection{Divide and Conquer}
+El QuickSort es un algoritmo que usa la técnica de \textit{Divide and Conquer} \cite{history}, en donde 
 
+
+\subsection{Algoritmo}
 Los pasos principales que sigue el algoritmo son:
 \begin{enumerate}
     \item Si la longitud del arreglo es menor a dos, se retorna el elemento directamente (caso base).
@@ -57,8 +64,10 @@ Los pasos principales que sigue el algoritmo son:
     \item El arreglo se reordena colocando los elementos menores al pivote a la izquierda y los mayores a la derecha.
     \item Los pasos anteriores se aplican recursivamente a cada subarreglo hasta alcanzar el caso base.
 \end{enumerate}
-
+\subsection{complejidad y pivote}
+Escoger bien el pivote...
 En cuanto a la complejidad, el peor caso ocurre cuando las particiones dividen el arreglo de manera muy desigual (por ejemplo, $n-1$ y $0$ elementos), resultando en una complejidad de $O(n^2)$. El mejor caso se logra cuando el pivote divide el arreglo en dos mitades balanceadas en cada paso, alcanzando una complejidad de $\Theta(n \log n)$. En la práctica, el caso promedio se acerca bastante al mejor caso debido a que la recurrencia converge a $n \log n$, por lo que QuickSort es considerado uno de los algoritmos de ordenamiento más eficientes.
+\subsection{Algoritmos de ordenamiento in-place}
 
 \section{Metodología}
 Aquí debe describir los métodos, enfoques o procedimientos utilizados en su investigación.
@@ -66,47 +75,14 @@ Aquí debe describir los métodos, enfoques o procedimientos utilizados en su in
 \section{Resultados}
 Presente los hallazgos y datos recopilados de su metodología. Incluya figuras y tablas como se muestra a continuación.
 
-\subsection{Subsección de Resultados (Ejemplo)}
-Si es necesario, puede subdividir sus secciones.
 
 \section{Conclusiones}
 Resuma las conclusiones clave extraídas de los resultados y discuta las implicaciones de su trabajo.
 
-\section*{Agradecimiento}
-El texto de agradecimiento va aquí (opcional).
+El quicksort es el mejor de los algoritmos de in-place dado que se escoga bien el pivote.
 
 \section*{Referencias}
-\begin{thebibliography}{00}
-
-\end{thebibliography}
-
-% --- Ejemplos de figura y tabla (sin depender de archivos externos) ---
-\begin{figure}[htbp]
-\centering
-\fbox{\rule[0pt]{0pt}{50pt}\rule{0.4\textwidth}{0pt}} % caja simulando imagen
-\caption{Ejemplo de pie de figura sin archivo externo.}
-\label{fig}
-\end{figure}
-
-\begin{table}[htbp]
-\caption{Ejemplo de Tabla.}
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Columna 1}&\textbf{Columna 2} \\
-\hline
-Dato 1& Dato 2 \\
-\hline
-\end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
 % ------------------------------------------------------------------------------------------------------
-
-\vspace{12pt}
-\color{red}
-Las plantillas de conferencia de la IEEE contienen texto guía para componer y formatear artículos de conferencia. 
-Asegúrese de eliminar todo el texto de la plantilla de su artículo antes de enviarlo a la conferencia. 
-Si no elimina el texto de la plantilla, su artículo podría no ser publicado.
-
+\bibliographystyle{IEEEtran}
+\bibliography{biblios.bib}
 \end{document}
