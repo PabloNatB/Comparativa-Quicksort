@@ -21,8 +21,25 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{original_paper}
+\BIBentryALTinterwordspacing
+C.~A.~R. Hoare, ``Algorithm 64: Quicksort,'' \emph{Commun. ACM}, vol.~4, no.~7,
+  p. 321, Jul. 1961. [Online]. Available:
+  \url{https://doi.org/10.1145/366622.366644}
+\BIBentrySTDinterwordspacing
+
 \bibitem{history}
 L.~Khreisat, ``Quicksort a historical perspective and empirical study,'' 07
   2008.
+
+\bibitem{divide_and_conquer}
+G.~Heineman, G.~Pollice, and S.~Selkow, \emph{Algorithms in a Nutshell,
+  2e}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA: O'Reilly Media,
+  Mar. 2016.
+
+\bibitem{intro_algo}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, \emph{Introduction
+  to Algorithms, Third Edition}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax
+  The MIT Press, 2009.
 
 \end{thebibliography}

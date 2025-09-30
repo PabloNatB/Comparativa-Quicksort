@@ -8,15 +8,17 @@
 \usepackage{xcolor}
 \usepackage[pdftex]{hyperref}
 \usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{float} 
+\usepackage{algpseudocode}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
 
-\title{Comparativa Quicksort\\
-{\footnotesize \textsuperscript{*}Nota: Los subtítulos no son capturados en Xplore y
-no deben usarse}%
-\thanks{Identifique la agencia de financiación aplicable aquí. Si no hay, elimine esta línea.}}
+\title{Comparativa Quicksort}
+%{\footnotesize \textsuperscript{*}Nota: Los subtítulos no son capturados en Xplore y no deben usarse}%
+%\thanks{Identifique la agencia de financiación aplicable aquí. Si no hay, elimine esta línea.}}
 
 \author{\IEEEauthorblockN{Alexis Raciel Ibarra Garnica}
 \IEEEauthorblockA{\textit{Facultad de Informática} \\
@@ -34,39 +36,84 @@ pablonatera16@gmail.com}
 \maketitle
 
 \begin{abstract}
-In this paper we implemented QuickSort in C sharp along with other in-place sorting algorithms such as BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
+In this paper we implemented Quicksort in C sharp along with other in-place sorting algorithms such as BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
 This with the intention of comparing performance while maintaining $O(1)$ spacial complexity.
-We concluded that of all the in-place sorting algorithms, QuickSort is the best option given that the pivot is chosen adequately.
+We concluded that of all the in-place sorting algorithms, Quicksort is the best option given that the pivot is chosen adequately.
 \end{abstract}
 
 \begin{IEEEkeywords}
-QuickSort, Divide and Conquer, Big O
+Quicksort, Divide and Conquer, Big O.
 \end{IEEEkeywords}
 
 
 \section{Introducción}
 
+El algoritmo Quicksort es uno de los algoritmos más eficientes y la 
+primera elección en muchas aplicaciones debido a su flexibilidad de los distintos tipos de datos que acepta como entrada y por usar menos recursos de memoria.
+
 \subsection{Antecedentes Históricos}
-El algoritmo \textit{QuickSort}, fue desarrollado por Tony Hoare en 1959 mientras era estudiante de ciencias de la computación en la Universidad Estatal de Moscú, 
+El algoritmo \textit{Quicksort}, fue desarrollado por Tony Hoare en 1959 mientras era estudiante de ciencias de la computación en la Universidad Estatal de Moscú, 
 surgió de la necesidad de ordenar listas de palabras para traducirlas del ruso al inglés. 
 Su propuesta superó en eficiencia al método de \textit{Insertion Sort}, haciendo uso del nuevo concepto de particiones e implementándose inicialmente en Mercury Autocode. 
-Posteriormente, al regresar a Inglaterra, Hoare adaptó su idea para mejorar el algoritmo de \textit{Shellsort}, lo que lo llevó a publicar QuickSort en 1961, y un año más tarde una versión mejorada. QuickSort está basado en el paradigma de \textit{Divide and Conquer}, creando particiones recursivas en el arreglo hasta llegar a un caso base. \cite{history} 
+Posteriormente, al regresar a Inglaterra, Hoare adaptó su idea para mejorar el algoritmo de \textit{Shellsort}, lo que lo llevó a publicar Quicksort en 1961.\cite{original_paper}
+\\
+Desde su primer publicación han habido diversas modificaciones con la intención de hacer aún más eficiente el algoritmo, siendo la primer de estas en 1962 por el mismo Hoare.
+Otras modificaciones se basan en mejores métodos para elegir en pivote y así reducir la complejidad en el peor caso, la más popular es usando el algoritmo de Singleton.
+\cite{history} 
 
 \subsection{Divide and Conquer}
-El QuickSort es un algoritmo que usa la técnica de \textit{Divide and Conquer} \cite{history}, en donde 
+El Quicksort es un algoritmo que usa el paradigma de \textbf{Divide and Conquer}. 
+Este tipo de solución implica dividir el problema en dos subproblemas independientes usando un pivote, 
+cada uno siendo aproximadamente la mitad del problema original, y resolver estos subproblemas respectivamente para finalmente unir ambos en la solución final.\\
+En muchas ocasiones estos subproblemas aplican de manera recursiva hasta llegar un caso base, en donde es trivial la respuesta y de ahí se van uniendo las subsoluciones hasta llegar a la solución final.
+Cuando la división es balanceada, este enfoque logra reducir el número de niveles de recursión a $\log{n}$ niveles de recursión.
+Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y la \textit{Transformada Rápida de Fourier}.
+\cite{divide_and_conquer}
 
 
 \subsection{Algoritmo}
-Los pasos principales que sigue el algoritmo son:
+Aplicando el paradigma de \textit{Divide and Conquer} y el concepto de particiones se obtiene la siguiente lógica para el Quicksort:
+
 \begin{enumerate}
     \item Si la longitud del arreglo es menor a dos, se retorna el elemento directamente (caso base).
-    \item Si la longitud es dos o más, se selecciona un pivote (existen distintas técnicas para ello).
-    \item El arreglo se reordena colocando los elementos menores al pivote a la izquierda y los mayores a la derecha.
-    \item Los pasos anteriores se aplican recursivamente a cada subarreglo hasta alcanzar el caso base.
+    \item Se selecciona un pivote (existen distintas técnicas para ello).
+    \item El arreglo se reordena colocando los elementos menores al pivote a la izquierda y los mayores a la derecha. Generando así las particiones. \textbf{Divide}
+    \item Los pasos anteriores se aplican recursivamente a cada partición hasta alcanzar el caso base. \textbf{Conquer}
 \end{enumerate}
-\subsection{complejidad y pivote}
-Escoger bien el pivote...
-En cuanto a la complejidad, el peor caso ocurre cuando las particiones dividen el arreglo de manera muy desigual (por ejemplo, $n-1$ y $0$ elementos), resultando en una complejidad de $O(n^2)$. El mejor caso se logra cuando el pivote divide el arreglo en dos mitades balanceadas en cada paso, alcanzando una complejidad de $\Theta(n \log n)$. En la práctica, el caso promedio se acerca bastante al mejor caso debido a que la recurrencia converge a $n \log n$, por lo que QuickSort es considerado uno de los algoritmos de ordenamiento más eficientes.
+\\
+Visto como pseudocódigo sería algo así:
+\begin{algorithm}[H]
+     % Sin [1] para que la línea de la función no sea numerada
+    \State \textbf{Quicksort($Array, low, high$)} 
+    \If {$low < high$}
+        \State $pivotID \gets \Call{Partition}{Array, low, high}$
+        \State \Call{Quicksort}{$Array, low, pivotID - 1$}
+        \State \Call{Quicksort}{$Array, pivotID + 1, high$}
+    \EndIf
+\end{algorithm}
+
+para el Quicksort. Para las particiones luciría así: \\
+
+\begin{algorithm}[H]
+    \State \textbf{Partition($Array, low, high$)}
+        \State $x \gets Array[high]$ 
+        \State $i \gets low - 1$
+        \For {$j = low$ \textbf{to} $high - 1$}
+            \If {$Array[j] \leq x$}
+                \State $i \gets i + 1$
+                \State $\text{swap } Array[i] , Array[j]$
+            \EndIf
+        \EndFor
+        \State $\text{swap } Array[i + 1] , Array[high]$
+        \State \Return $i + 1$
+\end{algorithm}
+
+\\En la primera llamada \textbf{low} sería $0$ y \textbf{high} sería la longitud del arreglo menos 1.
+\cite{intro_algo}
+
+\subsection{Complejidad y pivote}
+A diferencia de otros algoritmos donde la complejidad 
+En cuanto a la complejidad, el peor caso ocurre cuando las particiones dividen el arreglo de manera muy desigual (por ejemplo, $n-1$ y $0$ elementos), resultando en una complejidad de $O(n^2)$. El mejor caso se logra cuando el pivote divide el arreglo en dos mitades balanceadas en cada paso, alcanzando una complejidad de $\Theta(n \log n)$. En la práctica, el caso promedio se acerca bastante al mejor caso debido a que la recurrencia converge a $n \log n$, por lo que Quicksort es considerado uno de los algoritmos de ordenamiento más eficientes.
 \subsection{Algoritmos de ordenamiento in-place}
 
 \section{Metodología}
@@ -77,12 +124,9 @@ Presente los hallazgos y datos recopilados de su metodología. Incluya figuras y
 
 
 \section{Conclusiones}
-Resuma las conclusiones clave extraídas de los resultados y discuta las implicaciones de su trabajo.
+El Quicksort es el mejor de los algoritmos de in-place dado que se escoga bien el pivote.
 
-El quicksort es el mejor de los algoritmos de in-place dado que se escoga bien el pivote.
 
-\section*{Referencias}
-% ------------------------------------------------------------------------------------------------------
 \bibliographystyle{IEEEtran}
 \bibliography{biblios.bib}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.7)  29 SEP 2025 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.7)  30 SEP 2025 01:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -403,49 +403,97 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip56
 )
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+ (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count296
+\float@exts=\toks26
+\float@box=\box55
+\@float@everytoks=\toks27
+\@floatcapt=\box56
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count297
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
+ode.sty
+Package: algpseudocode 
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
+cx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count298
+\c@ALG@rem=\count299
+\c@ALG@nested=\count300
+\ALG@tlm=\skip57
+\ALG@thistlm=\skip58
+\c@ALG@Lnr=\count301
+\c@ALG@blocknr=\count302
+\c@ALG@storecount=\count303
+\c@ALG@tmpcounter=\count304
+\ALG@tmplength=\skip59
+
+! LaTeX Error: Command \algorithmic already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112    }
+          %
+? 
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count296
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box57
 ) (reporte_quicksort.aux)
 \openout1 = `reporte_quicksort.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 -- Lines per column: 56 (exact).
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count297
+\scratchcounter=\count306
 \scratchdimen=\dimen179
-\scratchbox=\box56
-\nofMPsegments=\count298
-\nofMParguments=\count299
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count300
+\scratchbox=\box58
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count309
 \MPscratchDim=\dimen180
-\MPnumerator=\count301
-\makeMPintoPDFobject=\count302
-\everyMPtoPDFconversion=\toks27
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks30
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -457,24 +505,321 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 17.
  (reporte_quicksort.out) (reporte_quicksort.out)
 \@outlinefile=\write3
 \openout3 = `reporte_quicksort.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 7168) in paragraph at lines 76--77
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 V
+      isto como pseudocódigo sería algo así:
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.87     \State
+                \textbf{Quicksort($Array, low, high$)}
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.87     \State
+                \textbf{Quicksort($Array, low, high$)}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87     \State
+                \textbf{Quicksort($Array, low, high$)}
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.88     \If
+             {$low < high$}
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.88     \If
+             {$low < high$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88     \If
+             {$low < high$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89         \State
+                    $pivotID \gets \Call{Partition}{Array, low, high}$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90         \State
+                    \Call{Quicksort}{$Array, low, pivotID - 1$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91         \State
+                    \Call{Quicksort}{$Array, pivotID + 1, high$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92     \EndIf
+               
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.98     \State
+                \textbf{Partition($Array, low, high$)}
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.98     \State
+                \textbf{Partition($Array, low, high$)}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98     \State
+                \textbf{Partition($Array, low, high$)}
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.99         \State
+                    $x \gets Array[high]$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.99         \State
+                    $x \gets Array[high]$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99         \State
+                    $x \gets Array[high]$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.100         \State
+                     $i \gets low - 1$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.100         \State
+                     $i \gets low - 1$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100         \State
+                     $i \gets low - 1$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.101         \For
+                   {$j = low$ \textbf{to} $high - 1$}
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.101         \For
+                   {$j = low$ \textbf{to} $high - 1$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101         \For
+                   {$j = low$ \textbf{to} $high - 1$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102             \If
+                      {$Array[j] \leq x$}
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103                 \State
+                             $i \gets i + 1$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104                 \State
+                             $\text{swap } Array[i] , Array[j]$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105             \EndIf
+                        
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106         \EndFor
+                     
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.107         \State
+                     $\text{swap } Array[i + 1] , Array[high]$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.107         \State
+                     $\text{swap } Array[i + 1] , Array[high]$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107         \State
+                     $\text{swap } Array[i + 1] , Array[high]$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.108         \State
+                     \Return $i + 1$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.108         \State
+                     \Return $i + 1$
+? 
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108         \State
+                     \Return $i + 1$
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \\E
+         n la primera llamada \textbf{low} sería $0$ y \textbf{high} sería...
+
+? 
+[1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pa
+blo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+]
+Underfull \hbox (badness 7168) in paragraph at lines 123--124
 []\OT1/ptm/m/n/10 Presente los hal-laz-gos y datos re-copi-la-dos de su
  []
 
@@ -490,27 +835,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pa
-blo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+[2
 
-
-]
-(reporte_quicksort.aux)
+] (reporte_quicksort.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `reporte_quicksort.out' has not changed.
-(rerunfilecheck)             Checksum: 469C2E563B3A1F5EA46C5D1B8DC85E65;1335.
+(rerunfilecheck)             Checksum: 209B9215C87D86AD806433A948404F01;1335.
  ) 
 Here is how much of TeX's memory you used:
- 11161 strings out of 474486
- 175766 string characters out of 5743756
- 1948542 words of memory out of 5000000
- 33283 multiletter control sequences out of 15000+600000
- 595365 words of font info for 112 fonts, out of 8000000 for 9000
+ 11779 strings out of 474486
+ 185677 string characters out of 5743756
+ 1956542 words of memory out of 5000000
+ 33883 multiletter control sequences out of 15000+600000
+ 597315 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,593b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,587b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi9.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -522,9 +864,9 @@ type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX
 /Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/pablo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/pablo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on reporte_quicksort.pdf (1 page, 123518 bytes).
+Output written on reporte_quicksort.pdf (2 pages, 134089 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
