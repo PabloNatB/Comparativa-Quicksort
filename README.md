@@ -2,7 +2,7 @@
 
 Proyecto hecho por Alexis Raciel Ibarra Garnica y Pablo Natera Bravo
 
-Se hizo una comparativa entre el famoso algoritmo Quicksort y BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
+Se hizo una comparativa del famoso algoritmo Quicksort contra BubbleSort, Flag BubbleSort, SelectionSort y InsertionSort.
 
 
 ## Descripción
