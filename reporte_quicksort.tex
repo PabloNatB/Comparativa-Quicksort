@@ -72,7 +72,7 @@ Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y l
 
 
 \subsection{Algoritmo}
-Aplicando el paradigma de \textit{Divide and Conquer} y el concepto de particiones se obtiene la siguiente lógica para el Quicksort:
+Aplicando el paradigma de \textit{Divide and Conquer} y el concepto de particiones se obtiene la siguiente lógica para el Quicksort\cite{Grokking}:
 
 \begin{enumerate}
     \item Si la longitud del arreglo es menor a dos, se retorna el elemento directamente (caso base).
@@ -92,7 +92,7 @@ Visto como pseudocódigo sería algo así:
     \EndIf
 \end{algorithm}
 
-para el Quicksort. Para las particiones luciría así: \\
+para el Quicksort. Para las particiones luciría así: 
 
 \begin{algorithm}[H]
     \State \textbf{Partition($Array, low, high$)}
@@ -108,14 +108,28 @@ para el Quicksort. Para las particiones luciría así: \\
         \State \Return $i + 1$
 \end{algorithm}
 
-\\En la primera llamada \textbf{low} sería $0$ y \textbf{high} sería la longitud del arreglo menos 1.
-\cite{intro_algo}
+En la primera llamada \textbf{low} sería $0$ y \textbf{high} sería la longitud del arreglo menos 1.
+Como se puede ver en esta implementación el pivote simplemente es el valor extremo de la derecha.
 
 \subsection{Complejidad y pivote}
-A diferencia de otros algoritmos donde la complejidad 
-En cuanto a la complejidad, el peor caso ocurre cuando las particiones dividen el arreglo de manera muy desigual (por ejemplo, $n-1$ y $0$ elementos), resultando en una complejidad de $O(n^2)$. El mejor caso se logra cuando el pivote divide el arreglo en dos mitades balanceadas en cada paso, alcanzando una complejidad de $\Theta(n \log n)$. En la práctica, el caso promedio se acerca bastante al mejor caso debido a que la recurrencia converge a $n \log n$, por lo que Quicksort es considerado uno de los algoritmos de ordenamiento más eficientes.
-\subsection{Algoritmos de ordenamiento in-place}
+A diferencia de otros algoritmos donde la complejidad depende de la posición de los elementos en el arreglo, en Quicksort la complejidad depende casi enteramente de la elección de pivote.\cite{pivot}
+\begin{enumerate}
+    \item Mejor caso: se escoge un pivote que sea exactamente la mediana y cree dos particiones de la misma longitud.
+Cuando esto sucede es que tenemos exactamente $\log{n}$ niveles de recursividad y cada nivel requiere $n$ operaciones, por lo que la complejidad resulta ser: $\omega(n\cdot \log{n})$.
+    \item Peor caso: si el pivote escogido genera particiones que dividen el arreglo de manera desigual ($n-1$ y $0$ elementos) en cada iteración, resultando en una complejidad de $O(n^2)$.
+\end{enumerate}
 
+Para entender como converge el caso promedio\dots
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{convergence_avg_case.png}
+    \caption{Diagrama de particiones desbalanceadas. Imagen obtenida de \cite{intro_algo}.}
+    \label{fig:avg_case}
+
+\end{figure}
+\subsection{Algoritmos de ordenamiento in-place}
+\cite{space_complexity}
 \section{Metodología}
 Aquí debe describir los métodos, enfoques o procedimientos utilizados en su investigación.
 

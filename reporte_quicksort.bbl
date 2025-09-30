@@ -37,9 +37,21 @@ G.~Heineman, G.~Pollice, and S.~Selkow, \emph{Algorithms in a Nutshell,
   2e}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA: O'Reilly Media,
   Mar. 2016.
 
+\bibitem{Grokking}
+A.~Y. Bhargava, \emph{Grokking Algorithms}.\hskip 1em plus 0.5em minus
+  0.4em\relax New York, NY: Manning Publications, May 2016.
+
+\bibitem{pivot}
+R.~Sedgewick and K.~Wayne, \emph{Algorithms}.\hskip 1em plus 0.5em minus
+  0.4em\relax Addison-Wesley Professional, Feb. 2011.
+
 \bibitem{intro_algo}
 T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, \emph{Introduction
   to Algorithms, Third Edition}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax
   The MIT Press, 2009.
+
+\bibitem{space_complexity}
+C.~LLC, \emph{Introduction to algorithms a comprehensive guide for Beginners},
+  1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax Packt Publishing, 2024.
 
 \end{thebibliography}
