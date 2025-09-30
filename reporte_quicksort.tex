@@ -115,21 +115,37 @@ Como se puede ver en esta implementación el pivote simplemente es el valor extr
 A diferencia de otros algoritmos donde la complejidad depende de la posición de los elementos en el arreglo, en Quicksort la complejidad depende casi enteramente de la elección de pivote.\cite{pivot}
 \begin{enumerate}
     \item Mejor caso: se escoge un pivote que sea exactamente la mediana y cree dos particiones de la misma longitud.
-Cuando esto sucede es que tenemos exactamente $\log{n}$ niveles de recursividad y cada nivel requiere $n$ operaciones, por lo que la complejidad resulta ser: $\omega(n\cdot \log{n})$.
-    \item Peor caso: si el pivote escogido genera particiones que dividen el arreglo de manera desigual ($n-1$ y $0$ elementos) en cada iteración, resultando en una complejidad de $O(n^2)$.
+Cuando esto sucede es que tenemos exactamente $\log{n}$ niveles de recursividad y cada nivel requiere $n$ operaciones, por lo que la complejidad resulta ser: $\Omega(n\cdot \log{n})$.
+    \item Peor caso: si el pivote escogido genera particiones que dividen el arreglo de manera desigual ($n-1$ y $0$ elementos) en cada iteración, 
+    teniendo $n$ niveles de recursividad en donde cada nivel necesita de $\approx n$ operaciones,
+    resultando en una complejidad de $O(n^2)$.
+    \item Paso promedio: las particiones no son perfectamente balanceadas pero ambas son siempre de longitudes mayores a cero, en este caso la complejidad también converge a $\Theta(n\cdot \log{n})$.
 \end{enumerate}
 
-Para entender como converge el caso promedio\dots
+Para entender mejor porque el caso promedio converge a $n \cdot\log{n}$ es útil visualizar las particiones cuando están desbalanceadas pero no de longitud cero.
+En este ejemplo tenemos un arreglo en donde de manera recursiva las particiones van a tener una proporción de $1/10$ y otra de $9/10$.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{convergence_avg_case.png}
+    \includegraphics[scale=0.3]{convergence_avg_case.png}
     \caption{Diagrama de particiones desbalanceadas. Imagen obtenida de \cite{intro_algo}.}
     \label{fig:avg_case}
-
 \end{figure}
+
+En este ejemplo el número de niveles de recusrión llegará a ser $\log_{10/9}{n}$ en la rama de la derecha, y para la rama de la izquierda será $\log_{10}{n}$.
+Y para cada nivel de recursión se tendrán que hacer $\approx n$ operaciones, resultando en la complejidad de: $\Theta(n\cdot \log{n})$.
+
+Sabiendo esto es fácil entender porqué es necesaria una buena técina para escoger el pivote.
+\\Una técinca muy popular y relativamente sencilla de entender el agarrar el primer, último y elemento de el medio del arreglo o partición, 
+calcular su mediana y usar eso como pivote.
+Esta técnica ayuda a que el quicksort pase de tener una complejidad del peor caso para arreglos ordenados al mejor caso, y también ayuda a siempre tener dos particiones de longitud distintas a cero.
+
 \subsection{Algoritmos de ordenamiento in-place}
+Quicksort es un algoritmo in-place, lo que significa que funciona haciendo intercambios sin hacer uso de estructuras de datos externas. Otros algoritmos que son in-place serían ambas versiones del Bubblesort, Insertion sort y el Selection sort.
+La gran ventaja de usar este paradigma es que la complejidad espacial del algoritmo es bastante baja, $\log{n}$ en el mejor caso y caso promedio y $n$ en el peor caso.
+Usando la mediana de tres para escoger el pivote también nos aseguramos de tener una complejidad espacial logarítmica.
 \cite{space_complexity}
+
 \section{Metodología}
 Aquí debe describir los métodos, enfoques o procedimientos utilizados en su investigación.
 
