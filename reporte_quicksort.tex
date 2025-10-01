@@ -307,19 +307,15 @@ void I_Sort()
             for (int i = 1; i < n; i++)
             {
                 var key = Array[i];
-                var flag = 0;
-                for (int j = i - 1; j >= 0 && flag != 1;)
+                int j = i - 1;
+                while ( j >= 0 && Array[j] > key)
                 {
-                    if (key < Array[j])
-                    {
-                        NumComparisons++;
-                        Array[j + 1] = Array[j];
-                        j--;
-                        Array[j + 1] = key;
-                        NumSwaps++;
-                    }
-                    else flag = 1;
+                    NumComparisons++;
+                    Array[j + 1] = Array[j];
+                    j--;  
+                    NumSwaps++;    
                 }
+                Array[j + 1] = key;
             }
         }
 \end{minted}
@@ -406,15 +402,37 @@ Finalmente se guardaron los resultados en archivos csv para su posterior anális
 \section{Resultados}
 \subsubsection{Quicksort vs Quicksort optimizado}
 Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica:
-%añadir grafica
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{Exp1A.png}
+    \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1A}
+\end{figure}
+
 Mientras que cuando se hace la comparación con arreglos ordenados obtenemos esta otra gráfica:
-%añadir grafica
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{Exp1B.png}
+    \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1B}
+\end{figure}
 
 \subsubsection{Quicksort optimizado vs demás algoritmos}
+
 Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica:
-%añadir grafica
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Exp2A.png}
+    \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2A}
+\end{figure}
+
 Mientras que cuando se hace la comparación con arreglos ordenados obtenemos esta otra gráfica:
-%añadir grafica
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Exp2B.png}
+    \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2B}
+\end{figure}
 
 
 
@@ -439,7 +457,7 @@ Podemos afirmar que el Quicksort es un algoritmo sumamente efectivo tanto en com
 \bibliography{biblios}
 
 \begin{@twocolumnfalse}
-\newpage{}
+
 \section{Apéndice}
 A continuación se anexan los códigos en C\# de implementaciones y el de python para generar los gráficos. Para ver el repositorio de GitHub haga click \href{https://github.com/PabloNatB/Quicksort}{aquí}.
 
