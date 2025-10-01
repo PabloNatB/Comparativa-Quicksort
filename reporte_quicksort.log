@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.7)  30 SEP 2025 10:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.7)  30 SEP 2025 23:20
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **./reporte_quicksort.tex
 (reporte_quicksort.tex
@@ -198,27 +198,14 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic.
-sty
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
+)) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
+y
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
-\c@ALC@unique=\count280
-\c@ALC@line=\count281
-\c@ALC@rem=\count282
-\c@ALC@depth=\count283
-\ALC@tlm=\skip54
-\algorithmicindent=\skip55
-)
-(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
@@ -310,15 +297,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count284
+\c@section@level=\count280
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count285
+\etb@tempcnta=\count281
 )
 \@linkdim=\dimen175
-\Hy@linkcounter=\count286
-\Hy@pagecounter=\count287
+\Hy@linkcounter=\count282
+\Hy@pagecounter=\count283
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
@@ -328,7 +315,7 @@ Now handling font encoding PD1 ...
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count288
+\Hy@SavedSpaceFactor=\count284
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
@@ -342,7 +329,7 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count289
+\c@Hy@tempcnt=\count285
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
@@ -359,7 +346,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count290
+\Fld@menulength=\count286
 \Field@Width=\dimen177
 \Fld@charsize=\dimen178
 Package hyperref Info: Hyper figures OFF on input line 6065.
@@ -374,11 +361,11 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count291
-\c@Item=\count292
-\c@Hfootnote=\count293
+\Hy@abspage=\count287
+\c@Item=\count288
+\c@Hfootnote=\count289
 )
-Package hyperref Info: Driver: hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
 
@@ -387,8 +374,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count294
-\c@bookmark@seq@number=\count295
+\Fld@listcount=\count290
+\c@bookmark@seq@number=\count291
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -401,7 +388,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip56
+\Hy@SectionHShift=\skip54
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
 y
@@ -409,14 +396,17 @@ Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count292
 \float@exts=\toks26
 \float@box=\box55
 \@float@everytoks=\toks27
 \@floatcapt=\box56
 )
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
 \@float@every@algorithm=\toks28
-\c@algorithm=\count297
+\c@algorithm=\count293
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
 ode.sty
@@ -427,73 +417,161 @@ cx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count298
-\c@ALG@rem=\count299
-\c@ALG@nested=\count300
-\ALG@tlm=\skip57
-\ALG@thistlm=\skip58
-\c@ALG@Lnr=\count301
-\c@ALG@blocknr=\count302
-\c@ALG@storecount=\count303
-\c@ALG@tmpcounter=\count304
-\ALG@tmplength=\skip59
-
-! LaTeX Error: Command \algorithmic already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112    }
-          %
-? 
+\c@ALG@line=\count294
+\c@ALG@rem=\count295
+\c@ALG@nested=\count296
+\ALG@tlm=\skip55
+\ALG@thistlm=\skip56
+\c@ALG@Lnr=\count297
+\c@ALG@blocknr=\count298
+\c@ALG@storecount=\count299
+\c@ALG@tmpcounter=\count300
+\ALG@tmplength=\skip57
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2025/05/14 v3.7.0 Yet another Pygments shim for LaTeX
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
+ty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2025/05/29 v1.13.2 fvextra - extensions and patches for fancyv
+rb
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count301
+\FV@InFile=\read2
+\FV@TabBox=\box57
+\c@FancyVerbLine=\count302
+\FV@StepNumber=\count303
+\FV@OutFile=\write3
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2025/05/13 line numbers on paragraphs v5.5
+\linenopenalty=\count304
+\output=\toks29
+\linenoprevgraf=\count305
+\linenumbersep=\dimen179
+\linenumberwidth=\dimen180
+\c@linenumber=\count306
+\c@pagewiselinenumber=\count307
+\c@LN@truepage=\count308
+\c@internallinenumber=\count309
+\c@internallinenumbers=\count310
+\quotelinenumbersep=\dimen181
+\bframerule=\dimen182
+\bframesep=\dimen183
+\bframebox=\box58
+\@LN@amsmath@ams@eqpen=\count311
+)
+\c@FancyVerbWriteLine=\count312
+\c@FancyVerbBufferLine=\count313
+\c@FV@TrueTabGroupLevel=\count314
+\c@FV@TrueTabCounter=\count315
+\FV@TabBox@Group=\box59
+\FV@bgcolorstructbox=\box60
+\FV@TmpLength=\skip58
+\c@FV@HighlightLinesStart=\count316
+\c@FV@HighlightLinesStop=\count317
+\FV@LoopCount=\count318
+\FV@NCharsBox=\box61
+\FV@BreakIndent=\dimen184
+\FV@BreakIndentNChars=\count319
+\FV@BreakSymbolSepLeft=\dimen185
+\FV@BreakSymbolSepLeftNChars=\count320
+\FV@BreakSymbolSepRight=\dimen186
+\FV@BreakSymbolSepRightNChars=\count321
+\FV@BreakSymbolIndentLeft=\dimen187
+\FV@BreakSymbolIndentLeftNChars=\count322
+\FV@BreakSymbolIndentRight=\dimen188
+\FV@BreakSymbolIndentRightNChars=\count323
+\c@FancyVerbLineBreakLast=\count324
+\FV@LineBox=\box62
+\FV@LineIndentBox=\box63
+\c@FV@BreakBufferDepth=\count325
+\FV@LineWidth=\dimen189
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\latex2pyda
+ta.sty
+Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+)))
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks33
+\pgfopts@list@add@b@toks=\toks34
+)
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+\c@minted@FancyVerbLineTemp=\count326
+\@float@every@listing=\toks35
+\c@listing=\count327
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count328
+\l__pdf_internal_box=\box64
 ) (reporte_quicksort.aux)
 \openout1 = `reporte_quicksort.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 -- Lines per column: 56 (exact).
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen179
-\scratchbox=\box58
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen180
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count329
+\scratchdimen=\dimen190
+\scratchbox=\box65
+\nofMPsegments=\count330
+\nofMParguments=\count331
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen191
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
+\everyMPtoPDFconversion=\toks37
 )
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -505,315 +583,79 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 19.
  (reporte_quicksort.out) (reporte_quicksort.out)
-\@outlinefile=\write3
-\openout3 = `reporte_quicksort.out'.
+\@outlinefile=\write4
+\openout4 = `reporte_quicksort.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 V
-      isto como pseudocódigo sería algo así:
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.87     \State
-                \textbf{Quicksort($Array, low, high$)}
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.87     \State
-                \textbf{Quicksort($Array, low, high$)}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.87     \State
-                \textbf{Quicksort($Array, low, high$)}
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.88     \If
-             {$low < high$}
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.88     \If
-             {$low < high$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88     \If
-             {$low < high$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89         \State
-                    $pivotID \gets \Call{Partition}{Array, low, high}$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90         \State
-                    \Call{Quicksort}{$Array, low, pivotID - 1$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91         \State
-                    \Call{Quicksort}{$Array, pivotID + 1, high$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92     \EndIf
-               
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.98     \State
-                \textbf{Partition($Array, low, high$)}
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.98     \State
-                \textbf{Partition($Array, low, high$)}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98     \State
-                \textbf{Partition($Array, low, high$)}
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.99         \State
-                    $x \gets Array[high]$
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.99         \State
-                    $x \gets Array[high]$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99         \State
-                    $x \gets Array[high]$
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.100         \State
-                     $i \gets low - 1$
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.100         \State
-                     $i \gets low - 1$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100         \State
-                     $i \gets low - 1$
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.101         \For
-                   {$j = low$ \textbf{to} $high - 1$}
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.101         \For
-                   {$j = low$ \textbf{to} $high - 1$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.101         \For
-                   {$j = low$ \textbf{to} $high - 1$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102             \If
-                      {$Array[j] \leq x$}
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103                 \State
-                             $i \gets i + 1$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104                 \State
-                             $\text{swap } Array[i] , Array[j]$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105             \EndIf
-                        
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106         \EndFor
-                     
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.107         \State
-                     $\text{swap } Array[i + 1] , Array[high]$
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.107         \State
-                     $\text{swap } Array[i + 1] , Array[high]$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107         \State
-                     $\text{swap } Array[i + 1] , Array[high]$
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.108         \State
-                     \Return $i + 1$
-? 
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.108         \State
-                     \Return $i + 1$
-? 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.108         \State
-                     \Return $i + 1$
-? 
 [1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pa
 blo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<convergence_avg_case.png, id=70, 778.40813pt x 506.6428pt>
+<convergence_avg_case.png, id=130, 778.40813pt x 506.6428pt>
 File: convergence_avg_case.png Graphic file (type png)
 <use convergence_avg_case.png>
-Package pdftex.def Info: convergence_avg_case.png  used on input line 130.
+Package pdftex.def Info: convergence_avg_case.png  used on input line 138.
 (pdftex.def)             Requested size: 233.52423pt x 151.994pt.
 
-Underfull \hbox (badness 7168) in paragraph at lines 153--154
-[]\OT1/ptm/m/n/10 Presente los hal-laz-gos y datos re-copi-la-dos de su
- []
+! Undefined control sequence.
+l.154 \parUna
+              técinca muy popular y relativamente sencilla de entender el a...
 
-(reporte_quicksort.bbl)
+? 
+\pydata@fh@0=\write5
+\openout5 = `_C352ACD1CDF4254AD1FAD8CE206A8625.data.minted'.
+
+runsystem(latexminted config  --timestamp 20250930232020 C352ACD1CDF4254AD1FAD8
+CE206A8625)...executed.
+
+(_C352ACD1CDF4254AD1FAD8CE206A8625.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250930232020 C352ACD1CDF4254AD
+1FAD8CE206A8625)...executed.
+
+ (_minted/default.style.minted) (_minted/4FFD4847A12C2B716E9CA7CC66CE7BFD.highl
+ight.minted
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+.
+
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
+(_minted/DFB67CDF73220E747704A0117AE5ECF3.highlight.minted)
+(_minted/369FEE9C43157770BC82E5BED6D187EB.highlight.minted)
+(_minted/E0991A377F862617B9E882E6B9E43E0E.highlight.minted [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \end{MintedVerbatim}
+                         <./convergence_avg_case.png>])
+(_minted/A2A9299235BA3E3B55581060E7BDEA24.highlight.minted)
+(_minted/D0A7004CB34A9D1E2BF6C167C836A64E.highlight.minted)
+(_minted/3E639596171B5BB6E58327CC4994E05B.highlight.minted)
+(_minted/81ECEAA0491B46A194DFB6E681BD97D2.highlight.minted)
+(_minted/32B825317CF81572A43863437BEC4598.highlight.minted)
+(_minted/89387B899C75F211602470C97373AC18.highlight.minted)
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 272.
+
+(reporte_quicksort.bbl [3])
+(_minted/DEE520E470192BAD144E3AB66ABC0C23.highlight.minted)
+(_minted/FBD2E4F8890298ED2280F340F5B1B9E8.highlight.minted)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -825,28 +667,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.162 \end{document}
-                     <./convergence_avg_case.png>] (reporte_quicksort.aux)
+[4
+
+] (reporte_quicksort.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `reporte_quicksort.out' has not changed.
-(rerunfilecheck)             Checksum: 209B9215C87D86AD806433A948404F01;1335.
+(rerunfilecheck)             Checksum: 296C85CFFD3D46476894A288F6D22388;3950.
  ) 
 Here is how much of TeX's memory you used:
- 11801 strings out of 474486
- 186094 string characters out of 5743756
- 1956542 words of memory out of 5000000
- 33898 multiletter control sequences out of 15000+600000
- 597315 words of font info for 114 fonts, out of 8000000 for 9000
+ 16471 strings out of 474486
+ 320214 string characters out of 5743756
+ 1954542 words of memory out of 5000000
+ 38452 multiletter control sequences out of 15000+600000
+ 598345 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,364b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,519b,985s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -855,13 +693,16 @@ type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/pablo/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/pablo/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/pablo/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/pablo/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on reporte_quicksort.pdf (2 pages, 178925 bytes).
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/pab
+lo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/p
+ablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users
+/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users
+/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/User
+s/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/User
+s/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on reporte_quicksort.pdf (4 pages, 227676 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 

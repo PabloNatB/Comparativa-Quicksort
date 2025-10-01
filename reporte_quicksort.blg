@@ -3,7 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: reporte_quicksort.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: IEEEtran.bst
-Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
@@ -18,7 +18,7 @@ Warning--empty journal in history
 Done.
 You've used 7 entries,
             4087 wiz_defined-function locations,
-            864 strings with 8121 characters,
+            864 strings with 8117 characters,
 and the built_in function-call counts, 3132 in all, are:
 = -- 212
 > -- 61
