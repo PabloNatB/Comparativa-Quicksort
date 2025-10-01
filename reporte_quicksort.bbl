@@ -29,7 +29,8 @@ C.~A.~R. Hoare, ``Algorithm 64: Quicksort,'' \emph{Commun. ACM}, vol.~4, no.~7,
 \BIBentrySTDinterwordspacing
 
 \bibitem{history}
-L.~Khreisat, ``Quicksort a historical perspective and empirical study,'' 07
+L.~Khreisat, ``Quicksort a historical perspective and empirical study,''
+  \emph{International Journal of Computer Science and Network Security}, 07
   2008.
 
 \bibitem{divide_and_conquer}

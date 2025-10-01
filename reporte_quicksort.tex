@@ -11,6 +11,7 @@
 \usepackage{float} 
 \usepackage{algpseudocode}
 \usepackage{minted}
+\usemintedstyle{vs}
 \usepackage{xcolor} % to access the named colour LightGray
 %\definecolor{LightGray}{gray}{0.9}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -71,8 +72,7 @@ Este tipo de solución implica dividir el problema en dos subproblemas independi
 cada uno siendo aproximadamente la mitad del problema original, y resolver estos subproblemas respectivamente para finalmente unir ambos en la solución final.\par
 En muchas ocasiones estos subproblemas aplican de manera recursiva hasta llegar un caso base, en donde es trivial la respuesta y de ahí se van uniendo las subsoluciones hasta llegar a la solución final.
 Cuando la división es balanceada, este enfoque logra reducir el número de niveles de recursión a $\log{n}$ niveles de recursión.
-Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y la \textit{Transformada Rápida de Fourier}.
-\cite{divide_and_conquer}
+Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y la \textit{Transformada Rápida de Fourier}.\cite{divide_and_conquer}
 
 
 \subsection{Algoritmo}
@@ -89,12 +89,12 @@ Aplicando el paradigma de \textit{Divide and Conquer} y el concepto de particion
 \begin{algorithm}[H]
     \begin{algorithmic}
      % Sin [1] para que la línea de la función no sea numerada
-    \State \textbf{Quicksort($Array, low, high$)} 
-    \If {$low < high$}
-        \State $pivotID \gets \Call{Partition}{Array, low, high}$
-        \State \Call{Quicksort}{$Array, low, pivotID - 1$}
-        \State \Call{Quicksort}{$Array, pivotID + 1, high$}
-    \EndIf
+    \State\textbf{Quicksort ($Array, low, high$)} 
+    \If{$low < high$}
+        \State$pivotID \gets \Call{Partition}{Array, low, high}$
+        \State\Call{Quicksort}{$Array, low, pivotID - 1$}
+        \State\Call{Quicksort}{$Array, pivotID + 1, high$}
+    \EndIf{}
     \end{algorithmic}
 \end{algorithm}
 
@@ -102,17 +102,17 @@ para el Quicksort. Para las particiones luciría así:
 
 \begin{algorithm}[H]
     \begin{algorithmic}
-    \State \textbf{Partition ($Array, low, high$)}
-        \State $x \gets Array[high]$ 
-        \State $i \gets low - 1$
-        \For {$j = low$ \textbf{to} $high - 1$}
-            \If {$Array[j] \leq x$}
-                \State $i \gets i + 1$
-                \State $\text{swap } Array[i] , Array[j]$
-            \EndIf
-        \EndFor
-        \State $\text{swap } Array[i + 1] , Array[high]$
-        \State \Return $i + 1$
+    \State\textbf{Partition ($Array, low, high$)}
+        \State$x \gets Array[high]$ 
+        \State$i \gets low - 1$
+        \For{$j = low$ \textbf{to} $high - 1$}
+            \If{$Array[j] \leq x$}
+                \State$i \gets i + 1$
+                \State$\text{swap } Array[i] , Array[j]$
+            \EndIf{}
+        \EndFor{}
+        \State$\text{swap } Array[i + 1] , Array[high]$
+        \State\Return$i + 1$
         \end{algorithmic}
 \end{algorithm}
 
@@ -136,8 +136,7 @@ En este ejemplo tenemos un arreglo en donde de manera recursiva las particiones 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{convergence_avg_case.png}
-    \caption{Diagrama de particiones desbalanceadas. Imagen obtenida de \cite{intro_algo}.}
-    \label{fig:avg_case}
+    \caption{Diagrama de particiones desbalanceadas. Imagen obtenida de\cite{intro_algo}.}\label{fig:avg_case}
 \end{figure}
 
 Como se puede ver el número de niveles de recusrión llegará a ser $\log_{10/9}{n}$ en la rama de la derecha, y en la rama de la izquierda será $\log_{10}{n}$.\par
@@ -151,15 +150,14 @@ Y posteriormente, por nomenclatura de notación Big O, podemos ignorar la consta
 Para cada nivel de recursión se tendrán que hacer $\approx n$ operaciones, resultando en la complejidad de: $\Theta(n\cdot \log{n})$.
 
 Sabiendo esto es simple entender porqué es necesaria una buena técina para escoger el pivote.
-\parUna técinca muy popular y relativamente sencilla de entender el agarrar el primer, último y elemento de el medio del arreglo o partición, 
+\par Una técnica muy popular y relativamente sencilla de entender el agarrar el primer, último y elemento de el medio del arreglo o partición, 
 calcular su mediana y usar eso como pivote.
 Esta técnica ayuda a que el quicksort pase de tener una complejidad del peor caso para arreglos ordenados al mejor caso, y también ayuda a siempre tener dos particiones de longitud distintas a cero.
 
 \subsection{Algoritmos de ordenamiento in-place}
 Quicksort es un algoritmo in-place, lo que significa que funciona haciendo intercambios sin hacer uso de estructuras de datos externas. Otros algoritmos que son in-place serían ambas versiones del Bubblesort, Insertion sort y el Selection sort.
 La gran ventaja de usar este paradigma es que la complejidad espacial del algoritmo es bastante baja, $\Theta(\log{n})$ en el mejor caso y caso promedio y $O(n)$ en el peor caso.
-Sin embargo, si hacemos uso de la técnica de la mediana de tres para escoger el pivote, nos aseguramos de tener una complejidad espacial logarítmica al tener los $\log{n}$ niveles.
-\cite{space_complexity}
+Sin embargo, si hacemos uso de la técnica de la mediana de tres para escoger el pivote, nos aseguramos de tener una complejidad espacial logarítmica al tener los $\log{n}$ niveles.\cite{space_complexity}
 
 \section{Metodología}
 Aquí debe describir los métodos, enfoques o procedimientos utilizados en su investigación.
@@ -169,18 +167,47 @@ En esta primera implementación se recreó paso a paso el pseudocódigo menciona
 La función principal quedó de la siguiente manera:
 
 \begin{minted}{csharp}
-void quicksort(){
-...
-}
-
+void q_sort(int low, int high)
+        {
+            if (low < high)
+            {
+                int q = Partition(low, high);
+                q_sort(low, q - 1);
+                q_sort(q + 1, high);
+            }
+        }
 \end{minted}
 
 Mientras que la función partición quedó así:
 
 \begin{minted}{csharp}
-void partition(){
-...
-}
+int Partition(int low, int high)
+        {
+            int i = low - 1;
+            int pivot = Array[high];
+            int temp;
+            for (int j = low; j < high; j++)
+            {
+                NumComparisons++;
+                if (Array[j] <= pivot)
+                {
+                    i++;
+                    // swap
+                    temp = Array[j];
+                    Array[j] = Array[i];
+                    Array[i] = temp;
+                    NumSwaps++;
+                }
+            }
+
+            // final swap
+            temp = Array[i + 1];
+            Array[i + 1] = Array[high];
+            Array[high] = temp;
+            NumSwaps++;
+
+            return i + 1;
+        }
 \end{minted}
 
 Añadiendo un contador de comparaciones e intercambios para cuantificar complejidad.
@@ -188,49 +215,139 @@ Añadiendo un contador de comparaciones e intercambios para cuantificar compleji
 \subsubsection{Quicksort Optimizado}
 Posterior a la implementación original del quicksort, se modificó para que el pivote sea escogido usando la mediana del primer, medio y último elemento de la partición.
 Para ello se hizo una función que tiene como parámetros un arreglo y los índices inferior y superior, y su valor de retorno es el índice de la mediana de las posiciones inferior, media y superior.
-\begin{minted}{csharp}
-void median_of_3(){
-...
-}
+\begin{minted}[breaklines=true]{csharp}
+int Median_Of_3(int low, int high)
+        {
+            int middle = (low + high + 1) / 2;
+            int x1 = Array[low];
+            int x2 = Array[middle];
+            int x3 = Array[high];
+
+            if ((x2 <= x1 && x1 <= x3) || (x3 <= x1 && x1 <= x2))
+                return low;
+            else if ((x1 <= x2 && x2 <= x3) || (x3 <= x2 && x2 <= x1))
+                return middle;
+            else
+                return high;
+        }
 \end{minted}
 Teniendo esta función lista sólo hubo que añadir dos líneas antes del ciclo for en la función partición para escoger el pivote y mandarlo al final.
 \begin{minted}{csharp}
-void partition_v2(){
-...
-}
+
+            int i = low - 1;
+            int pivotIndex = Median_Of_3(low, high);
+            NumComparisons++;
+            // swap pivot con high
+            NumSwaps++;
+            int temp = Array[pivotIndex];
+            Array[pivotIndex] = Array[high];
+            Array[high] = temp;
+
+            int pivot = Array[high];
 \end{minted}
 
 \subsubsection{Bubblesort}
 Para poder hacer una comparativa al quicksort se implementaron tanto el Bubblesort como el Flag Bubblesort, tenindo la implementación del Bubblesort así:
 
-\begin{minted}{csharp}
-void bsort(){
-...
+\begin{minted}[breaklines=true]{csharp}
+void B_Sort()
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            NumComparisons++;
+            if (Array[j + 1] < Array[j])
+            {
+                // Swap
+                int temp = Array[j + 1];
+                Array[j + 1] = Array[j];
+                Array[j] = temp;
+
+                NumSwaps++;
+            }
+        }
+    }
 }
 \end{minted}
 Y para el Flag Bubblesort sólo se anadió el flag de intercambio:
-\begin{minted}{csharp}
-void fbsort(){
-...
-}
+\begin{minted}[breaklines=true]{csharp}
+void FB_Sort()
+        {
+            for (int i = 0; i < n - 1; i++)
+            {
+                bool swapped = false;
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    NumComparisons++;
+                    if (Array[j + 1] < Array[j])
+                    {
+                        int temp = Array[j + 1];
+                        Array[j + 1] = Array[j];
+                        Array[j] = temp;
+
+                        NumSwaps++;
+                        swapped = true;
+                    }
+                }
+                if (!swapped)
+                {
+                    break;
+                }
+            }
+        }
 \end{minted}
 Ambas implementaciones tienen un contador de operaciones e intercambios para medir complejidad.
 
 \subsubsection{Insertionsort}
 Para implementarlo en C\# se hizo de la manera siguiente:
-\begin{minted}{csharp}
-void isort(){
-...
-}
+\begin{minted}[breaklines=true]{csharp}
+void I_Sort()
+        {
+            for (int i = 1; i < n; i++)
+            {
+                var key = Array[i];
+                var flag = 0;
+                for (int j = i - 1; j >= 0 && flag != 1;)
+                {
+                    if (key < Array[j])
+                    {
+                        NumComparisons++;
+                        Array[j + 1] = Array[j];
+                        j--;
+                        Array[j + 1] = key;
+                        NumSwaps++;
+                    }
+                    else flag = 1;
+                }
+            }
+        }
 \end{minted}
 añadiendo un contador de operaciones para cuantificar la complejidad.
 
 \subsubsection{Selectionsort}
 Para implementarlo en C\# se hizo de la manera siguiente:
-\begin{minted}{csharp}
-void ssort(){
-...
-}
+\begin{minted}[breaklines=true]{csharp}
+void S_Sort()
+        {
+            for (int i = 0; i < n - 1; i++)
+            {
+                int min = i;
+
+                for (int j = i + 1; j < n; j++)
+                {
+                    NumComparisons++;
+                    if (Array[j] < Array[min])
+                    {
+                        min = j;
+                    }
+                }
+                NumSwaps++;
+                int temp = Array[i];
+                Array[i] = Array[min];
+                Array[min] = temp;
+            }
+        }
 \end{minted}
 añadiendo un contador de operaciones para cuantificar la complejidad.
 
@@ -239,22 +356,41 @@ Se crearon dos funciones para poder probar nuestras implementaciones con arreglo
 La primera genera $n$ elementos aleatorios de la siguiente manera:
 
 \begin{minted}{csharp}
-int[] rand_n_array(){
-...
-}
+int[] rand_n_array(int n)
+        {
+            int[] Array = new int[n];
+            Random random = new Random(100);
+            int Valor;
+            for (int i = 0; i < n; i++)
+            {
+                Valor = random.Next(0, 2 * n);
+                Array[i] = Valor;
+            }
+            return Array;
+
+
+        }
 \end{minted}
+
 Cabe aclarar que se usa una semilla para asegurar reproducibilidad pero no es necesaria.\par
 Mientras que la segunda función genera $n$ elmentos ordenados de menor a mayor:
+
 \begin{minted}{csharp}
-int[] n_array(){
-...
-}
+int[] n_array(int n)
+        {
+            int[] Array = new int[n];
+            for(int i = 0; i < n; i++)
+            {
+                Array[i] = i;
+            }
+            return Array;
+        }
 \end{minted}
 
 
 \subsection{Experimentos}
 \subsubsection{Quicksort vs Quicksort optimizado}
-Primeramente se compararon ambas implementaciones de Quicksort en arreglos ordenados y aleatorios de longitudes desde 10 hasta 1000 elementos. \par
+Primeramente se compararon ambas implementaciones de Quicksort en arreglos ordenados y aleatorios de longitudes desde 10 hasta 1000 elementos.\par
 La elección de que el límite de logitud sea 1000 es para evitar el StackOverFlowException de C\# cuando la implementación no optimizada ordena arreglos ordenados.\par
 Finalmente se guardaron los resultados en archivos csv para su posterior análisis.
 
@@ -302,16 +438,23 @@ Podemos afirmar que el Quicksort es un algoritmo sumamente efectivo tanto en com
 \bibliographystyle{IEEEtran}
 \bibliography{biblios}
 
+\begin{@twocolumnfalse}
+\newpage{}
 \section{Apéndice}
-A continuación se anexan los códigos en C\# de implementaciones y el de python para generar los gráficos.
-\subsection{Implementaciones C\#}
-\begin{minted}{csharp}
-Código
-\end{minted}
+A continuación se anexan los códigos en C\# de implementaciones y el de python para generar los gráficos. Para ver el repositorio de GitHub haga click \href{https://github.com/PabloNatB/Quicksort}{aquí}.
+
+%Algoritmos
+\subsection{Implementaciones en C\#}
+\inputminted[breaklines=true]{csharp}{Qsort/Class1.cs}
+
+%Experimentos
+\subsection{Experimentos}
+\inputminted[breaklines=true]{csharp}{Qsort/Program.cs}
+
+%Gráficos
 \subsection{Gráficos}
-\begin{minted}{python}
-Código
-\end{minted}
+\inputminted[breaklines=true]{python}{graphs.py}
+\end{@twocolumnfalse}
 
 \end{document}
 
