@@ -14,6 +14,9 @@
 \usemintedstyle{vs}
 \usepackage{xcolor} % to access the named colour LightGray
 %\definecolor{LightGray}{gray}{0.9}
+\graphicspath{
+    {../}           % Una carpeta arriba
+}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
@@ -404,7 +407,7 @@ Finalmente se guardaron los resultados en archivos csv para su posterior anális
 Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Exp1A.png}
+    \includegraphics[scale=0.35]{../Gráficas/Exp1A.png}
     \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1A}
 \end{figure}
 
@@ -412,7 +415,7 @@ Mientras que cuando se hace la comparación con arreglos ordenados obtenemos est
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Exp1B.png}
+    \includegraphics[scale=0.35]{../Gráficas/Exp1B.png}
     \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1B}
 \end{figure}
 
@@ -422,7 +425,7 @@ Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{Exp2A.png}
+    \includegraphics[scale=0.3]{../Gráficas/Exp2A.png}
     \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2A}
 \end{figure}
 
@@ -430,7 +433,7 @@ Mientras que cuando se hace la comparación con arreglos ordenados obtenemos est
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{Exp2B.png}
+    \includegraphics[scale=0.3]{../Gráficas/Exp2B.png}
     \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2B}
 \end{figure}
 
@@ -463,15 +466,15 @@ A continuación se anexan los códigos en C\# de implementaciones y el de python
 
 %Algoritmos
 \subsection{Implementaciones en C\#}
-\inputminted[breaklines=true]{csharp}{Qsort/Class1.cs}
+\inputminted[breaklines=true]{csharp}{../Qsort/Class1.cs}
 
 %Experimentos
 \subsection{Experimentos}
-\inputminted[breaklines=true]{csharp}{Qsort/Program.cs}
+\inputminted[breaklines=true]{csharp}{../Qsort/Program.cs}
 
 %Gráficos
 \subsection{Gráficos}
-\inputminted[breaklines=true]{python}{graphs.py}
+\inputminted[breaklines=true]{python}{../Gráficas/graphs.py}
 \end{@twocolumnfalse}
 
 \end{document}
