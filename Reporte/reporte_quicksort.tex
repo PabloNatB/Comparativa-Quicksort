@@ -1,5 +1,6 @@
 \documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[spanish]{babel}
+\IEEEoverridecommandlockouts % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage[utf8]{inputenc}   % soporte para acentos
 \usepackage{amsmath,amssymb,amsfonts}
 %\usepackage{algorithmic}
@@ -28,23 +29,22 @@
 
 \author{\IEEEauthorblockN{Alexis Raciel Ibarra Garnica}
 \IEEEauthorblockA{\textit{Facultad de Informática} \\
-\textit{Universidad Autómona de Querétaro}\\
-Santiago de Querétaro, Qro, México \\
-direccion.correo@email.com}
+\textit{Universidad Autónoma de Querétaro}\\
+Santiago de Querétaro, Qro, México }
 \and
 \IEEEauthorblockN{Pablo Natera Bravo}
 \IEEEauthorblockA{\textit{Facultad de Informática} \\
-\textit{Universidad Autómona de Querétaro}\\
-Santiago de Querétaro, Qro, México \\
-pablonatera16@gmail.com}
+\textit{Universidad Autónoma de Querétaro}\\
+Santiago de Querétaro, Qro, México }
 }
 
 \maketitle
 
 \begin{abstract}
-In this paper we implemented Quicksort in C sharp along with other in-place sorting algorithms such as BubbleSort, Flag BubbleSort, SelectionSort and InsertionSort.
-This with the intention of comparing performance while maintaining $O(1)$ spacial complexity.
-We concluded that of all the in-place sorting algorithms, Quicksort is the best option given that the pivot is chosen adequately.
+En este trabajo se implementó el algoritmo Quicksort en C sharp en su versión original y una versión modificada junto con otros algoritmos clásicos de ordenamiento in-place BubbleSort, Flag BubbleSort, SelectionSort e InsertionSort.
+El objetivo principal fue comparar su rendimiento manteniendo una complejidad espacial de $O(1)$.
+Los resultados muestran que  el uso de la técnica de la mediana de tres en la versión optimizada del Quicksort mejora notablemente su estabilidad en arreglos previamente ordenados, evitando el peor caso de $O(n^2)$ y mejora ligeramente su rendimiento en arreglos desordenados.
+Además, entre los algoritmos in-place, Quicksort obtiene el mejor desempeño siempre que se utilice una estrategia adecuada para la selección del pivote.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -66,7 +66,7 @@ surgió de la necesidad de ordenar listas de palabras para traducirlas del ruso 
 Su propuesta superó en eficiencia al método de \textit{Insertion Sort}, haciendo uso del nuevo concepto de particiones e implementándose inicialmente en Mercury Autocode. 
 Posteriormente, al regresar a Inglaterra, Hoare adaptó su idea para mejorar el algoritmo de \textit{Shellsort}, lo que lo llevó a publicar Quicksort en 1961.\cite{original_paper}
 \par
-Desde su primer publicación han habido diversas modificaciones con la intención de hacer aún más eficiente el algoritmo, siendo la primer de estas en 1962 por el mismo Hoare.
+Desde su primera publicación han habido diversas modificaciones con la intención de hacer aún más eficiente el algoritmo, siendo la primer de estas en 1962 por el mismo Hoare.
 Otras modificaciones se basan en mejores métodos para elegir en pivote y así reducir la complejidad en el peor caso, la más popular es usando el algoritmo de Singleton.\cite{history} 
 
 \subsection{Divide and Conquer}
@@ -142,7 +142,7 @@ En este ejemplo tenemos un arreglo en donde de manera recursiva las particiones 
     \caption{Diagrama de particiones desbalanceadas. Imagen obtenida de\cite{intro_algo}.}\label{fig:avg_case}
 \end{figure}
 
-Como se puede ver el número de niveles de recusrión llegará a ser $\log_{10/9}{n}$ en la rama de la derecha, y en la rama de la izquierda será $\log_{10}{n}$.\par
+Como se puede ver el número de niveles de recursión llegará a ser $\log_{10/9}{n}$ en la rama de la derecha, y en la rama de la izquierda será $\log_{10}{n}$.\par
 Podemos simplificar estos logaritmos haciendo uso de la fórmula de cambio de base:
 
 \begin{equation}
@@ -152,7 +152,7 @@ Y posteriormente, por nomenclatura de notación Big O, podemos ignorar la consta
 
 Para cada nivel de recursión se tendrán que hacer $\approx n$ operaciones, resultando en la complejidad de: $\Theta(n\cdot \log{n})$.
 
-Sabiendo esto es simple entender porqué es necesaria una buena técina para escoger el pivote.
+Sabiendo esto es simple entender porqué es necesaria una buena técnica para escoger el pivote.
 \par Una técnica muy popular y relativamente sencilla de entender el agarrar el primer, último y elemento de el medio del arreglo o partición, 
 calcular su mediana y usar eso como pivote.
 Esta técnica ayuda a que el quicksort pase de tener una complejidad del peor caso para arreglos ordenados al mejor caso, y también ayuda a siempre tener dos particiones de longitud distintas a cero.
@@ -250,7 +250,7 @@ Teniendo esta función lista sólo hubo que añadir dos líneas antes del ciclo 
 \end{minted}
 
 \subsubsection{Bubblesort}
-Para poder hacer una comparativa al quicksort se implementaron tanto el Bubblesort como el Flag Bubblesort, tenindo la implementación del Bubblesort así:
+Para poder hacer una comparativa al quicksort se implementaron tanto el Bubblesort como el Flag Bubblesort, teniendo la implementación del Bubblesort así:
 
 \begin{minted}[breaklines=true]{csharp}
 void B_Sort()
@@ -372,7 +372,7 @@ int[] rand_n_array(int n)
 \end{minted}
 
 Cabe aclarar que se usa una semilla para asegurar reproducibilidad pero no es necesaria.\par
-Mientras que la segunda función genera $n$ elmentos ordenados de menor a mayor:
+Mientras que la segunda función genera $n$ elementos ordenados de menor a mayor:
 
 \begin{minted}{csharp}
 int[] n_array(int n)
@@ -390,27 +390,27 @@ int[] n_array(int n)
 \subsection{Experimentos}
 \subsubsection{Quicksort vs Quicksort optimizado}
 Primeramente se compararon ambas implementaciones de Quicksort en arreglos ordenados y aleatorios de longitudes desde 10 hasta 1000 elementos.\par
-La elección de que el límite de logitud sea 1000 es para evitar el StackOverFlowException de C\# cuando la implementación no optimizada ordena arreglos ordenados.\par
+La elección de que el límite de longitud sea 1000 es para evitar el StackOverFlowException de C\# cuando la implementación no optimizada ordena arreglos ordenados.\par
 Finalmente se guardaron los resultados en archivos csv para su posterior análisis.
 
 
 
 \subsubsection{Quicksort optimizado vs demás algoritmos}
 En el segundo experimento ahora se compararon las implementaciones del Quicksort optimizado, Bubblesort, Flag Bubblesort, Insertionsort y Selectionsort con arreglos tanto ordenados como desordenados.\par
-Para los arreglos ordenados las longitudes de las listas estuvieron en el rango de 100 a 50,000 elementos y para los arreglos desordenados los rangos variaron desde 100 hasta 10,000. Esta decisión se tomó para evitar saturar las computadora debido a la complejidad $O(n^2)$ de los demás algoritmos.\par
+Para los arreglos ordenados las longitudes de las listas estuvieron en el rango de 100 a 50,000 elementos y para los arreglos desordenados los rangos variaron desde 100 hasta 10,000. Esta decisión se tomó para evitar saturar la computadora debido a la complejidad $O(n^2)$ de los demás algoritmos.\par
 Finalmente se guardaron los resultados en archivos csv para su posterior análisis.
 
 
 
 \section{Resultados}
-\subsubsection{Quicksort vs Quicksort optimizado}
+\subsection{Quicksort vs Quicksort optimizado}
 Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica:
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{../Gráficas/Exp1A.png}
-    \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1A}
+    \caption{Comparativa de Quicksorts en escala lineal.}\label{fig:exp1A}
 \end{figure}
-
+Como se puede ver el quicksort optimizado es ligeramente más eficiente que el tradicional.\\
 Mientras que cuando se hace la comparación con arreglos ordenados obtenemos esta otra gráfica:
 
 \begin{figure}[H]
@@ -418,8 +418,8 @@ Mientras que cuando se hace la comparación con arreglos ordenados obtenemos est
     \includegraphics[scale=0.35]{../Gráficas/Exp1B.png}
     \caption{Comparativa de Quicksorts en escala logarítmica.}\label{fig:exp1B}
 \end{figure}
-
-\subsubsection{Quicksort optimizado vs demás algoritmos}
+Aquí es considerablemente mayor la diferencia, mientras que el quicksort optimizado mantiene $O(n\cdot \log{n})$ operaciones, el tradicional aumenta a $O(n^2)$ operaciones.
+\subsection{Quicksort optimizado vs demás algoritmos}
 
 Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica:
 
@@ -428,7 +428,7 @@ Cuando se hace la comparación con arreglos desordenados obtenemos esta gráfica
     \includegraphics[scale=0.3]{../Gráficas/Exp2A.png}
     \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2A}
 \end{figure}
-
+Aquí podemos ver como los demás algoritmos requieren de $O(n^2)$ operaciones mientras que el quicksort es constante.\\
 Mientras que cuando se hace la comparación con arreglos ordenados obtenemos esta otra gráfica:
 
 \begin{figure}[H]
@@ -436,7 +436,7 @@ Mientras que cuando se hace la comparación con arreglos ordenados obtenemos est
     \includegraphics[scale=0.3]{../Gráficas/Exp2B.png}
     \caption{Quicksort vs demás en escala logarítmica.}\label{fig:exp2B}
 \end{figure}
-
+Aquí el Insertion Sort y el Flag BubbleSort reducen su número de operaciones a $O(n)$, mientras que los demás mantienen el número de operaciones.
 
 
 \section{Conclusiones}
@@ -444,38 +444,41 @@ Mientras que cuando se hace la comparación con arreglos ordenados obtenemos est
 Después de analizar estas distintas implementaciones hay 2 puntos importantes de mencionar:
 
 \begin{itemize}
-    \item Escoger bien el pivote ayuda ligeramente en arreglos desordendos pero ayuda demasiado para arreglos ordenados y nos da una complejidad tanto temporal como espacial bastante más estable.
+    \item Escoger bien el pivote ayuda ligeramente en arreglos desordenados pero ayuda demasiado para arreglos ordenados y nos da una complejidad tanto temporal como espacial bastante más estable.
     \item De los algoritmos de ordenamiento in-place que se analizaron el quicksort es indiscutiblemente el ganador.
 \end{itemize}
 
 Sin embargo hay un dos preguntas que se podrían explorar a futuro:
 \begin{itemize}
     \item ¿Hay alguna implementación que supere la complejidad temporal obtenida aquí revisando si el arreglo está previamente ordenado? 
-    \item ¿qué otras técnicas para escoger el pivote existen y cualés son sus respectivas complejidades?
+    \item ¿qué otras técnicas para escoger el pivote existen y cuáles son sus respectivas complejidades?
 \end{itemize}
 
-Podemos afirmar que el Quicksort es un algoritmo sumamente efectivo tanto en complejidad espacial como temporal, es relativamente sencillo de implementar y es bastante flexible ya que acepta distintos tipos de datos como entrada; haciéndolo una opción bastante sólida para diversas aplicaciones.
+El Quicksort es un algoritmo sumamente efectivo tanto en complejidad espacial como temporal, 
+es relativamente sencillo de implementar y es bastante flexible ya que acepta distintos tipos de datos como entrada; 
+haciéndolo una opción bastante sólida para diversas aplicaciones.
 
 \bibliographystyle{IEEEtran}
 \bibliography{biblios}
 
-\begin{@twocolumnfalse}
 
-\section{Apéndice}
-A continuación se anexan los códigos en C\# de implementaciones y el de python para generar los gráficos. Para ver el repositorio de GitHub haga click \href{https://github.com/PabloNatB/Quicksort}{aquí}.
+\appendices
+\section{Repositorio}
+Para ver el repositorio completo de GitHub haga click \href{https://github.com/PabloNatB/Comparativa-Quicksort}{\textbf{aquí}}.
 
 %Algoritmos
 \subsection{Implementaciones en C\#}
-\inputminted[breaklines=true]{csharp}{../Qsort/Class1.cs}
+Para las implementaciones en C\# haga click \href{https://github.com/PabloNatB/Comparativa-Quicksort/blob/main/Qsort/Class1.cs}{\textbf{aquí}}.
 
 %Experimentos
 \subsection{Experimentos}
-\inputminted[breaklines=true]{csharp}{../Qsort/Program.cs}
+Para los experimentos en C\# haga click \href{https://github.com/PabloNatB/Comparativa-Quicksort/blob/main/Qsort/Program.cs}{\textbf{aquí}}.
 
-%Gráficos
-\subsection{Gráficos}
-\inputminted[breaklines=true]{python}{../Gráficas/graphs.py}
-\end{@twocolumnfalse}
+%Resultados
+\subsection{Tablas de resultados}
+Para las tablas de resultados haga click \href{https://github.com/PabloNatB/Comparativa-Quicksort/tree/main/Qsort/bin/Debug/net8.0}{\textbf{aquí}}.
+
+
 
 \end{document}
 

@@ -1,12 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from pathlib import Path
+import os
 
+script_path = Path(__file__).parents[0]
+
+#parent directory
+parent_directory = script_path.parent
+abs_path = parent_directory / 'Qsort' / 'bin' / 'Debug' / 'net8.0'
 
 #Experimento 1
 
 ## Experimento 1A
-df_exp1A = pd.read_csv('Qsort/bin/Debug/net8.0/experimento1A.csv')
+df_exp1A = pd.read_csv(abs_path /  'experimento1A.csv')
 
 plt.figure(figsize=(10, 6))
 plt.scatter(df_exp1A.n, df_exp1A['QS_v1_Comparaciones'], 
@@ -22,11 +29,11 @@ plt.legend(fontsize=11)
 plt.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('Exp1A.png', dpi=600, bbox_inches='tight')
+plt.savefig( 'Exp1A.png', dpi=600, bbox_inches='tight')
 plt.clf()
 
 ## Experimento 2A
-df_exp1B = pd.read_csv('Qsort/bin/Debug/net8.0/experimento1B.csv')
+df_exp1B = pd.read_csv(abs_path / 'experimento1B.csv')
 
 
 plt.figure(figsize=(10, 6))
@@ -35,7 +42,7 @@ plt.scatter(x=df_exp1B.n, y=df_exp1B['QS_v1_Comparaciones'],  label='Quicksort C
 plt.scatter(x=df_exp1B.n, y=df_exp1B['QS_v2_Comparaciones'],   label='Quicksort Optimizado', color='blue', marker='s', s=60, alpha=0.8, edgecolors='black')
 
 # Curvas 
-plt.plot(df_exp1B.n, [x**2 for x in df_exp1B.n], 
+plt.plot(df_exp1B.n, [(x**2)/2 for x in df_exp1B.n], 
          label=r'$O(n^2)$', c='black', linestyle='--', linewidth=2, alpha=0.6)
 plt.plot(df_exp1B.n, [x*np.log2(x) for x in df_exp1B.n], 
          label=r'$O(n\cdot \log {n})$', c='black', linestyle='-.', linewidth=2, alpha=0.6)
@@ -54,12 +61,12 @@ plt.xticks(fontsize=11)
 plt.yticks(fontsize=11)
 
 plt.tight_layout()
-plt.savefig('Exp1B.png', dpi=600, bbox_inches='tight')
+plt.savefig( 'Exp1B.png', dpi=600, bbox_inches='tight')
 plt.clf()
 #Experimento 2
 
 ## Experimento 2A
-df_exp2A = pd.read_csv('Qsort/bin/Debug/net8.0/experimento2A.csv')
+df_exp2A = pd.read_csv(abs_path / 'experimento2A.csv')
 
 plt.figure(figsize=(12, 8))
 
@@ -69,7 +76,7 @@ markers = ['o', 's', '^', 'D', 'v']
 algorithms = ['QS_v2_Comparaciones', 'Bubble_Comparaciones', 'FlagBubble_Comparaciones', 
               'Insertion_Comparaciones', 'Selection_Comparaciones']
 labels = ['Quicksort Optimizado', 'Bubblesort', 'Flag Bubblesort', 'Insertionsort', 'Selectionsort']
-x_2 = [x**2/2 for x in df_exp2A.n]
+x_2 = [(x**2)/2 for x in df_exp2A.n]
 nlogn = [x*np.log2(x) for x in df_exp2A.n]
 
 for i, (algo, label) in enumerate(zip(algorithms, labels)):
@@ -112,7 +119,7 @@ plt.tight_layout()
 plt.savefig('Exp2A.png', dpi=600, bbox_inches='tight')
 plt.clf()
 ## Experimento 2B
-df_exp2B = pd.read_csv('Qsort/bin/Debug/net8.0/experimento2B.csv')
+df_exp2B = pd.read_csv(abs_path / 'experimento2B.csv')
 
 
 plt.figure(figsize=(12, 8))
@@ -125,7 +132,7 @@ algorithms = ['QS_v2_Comparaciones', 'Bubble_Comparaciones', 'FlagBubble_Compara
 labels = ['Quicksort Optimizado', 'Bubblesort', 'Flag Bubblesort', 'Insertionsort', 'Selectionsort']
 
 # Curvas 
-x_2 = [x**2 for x in df_exp2B.n]  
+x_2 = [(x**2)/2 for x in df_exp2B.n]  
 n = [x for x in df_exp2B.n]       
 nlogn = [x*np.log2(x) for x in df_exp2B.n]
 
