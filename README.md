@@ -1,6 +1,6 @@
 # QuickSort - Divide and Conquer
 
-Proyecto hecho por Alexis Raciel Ibarra Garnica y Pablo Natera Bravo
+
 
 Se hizo una comparativa del famoso algoritmo Quicksort contra BubbleSort, Flag BubbleSort, SelectionSort y InsertionSort.
 
