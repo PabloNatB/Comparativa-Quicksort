@@ -41,7 +41,7 @@ Santiago de Querétaro, Qro, México }
 \maketitle
 
 \begin{abstract}
-En este trabajo se implementó el algoritmo Quicksort en C sharp en su versión original y una versión modificada junto con otros algoritmos clásicos de ordenamiento in-place BubbleSort, Flag BubbleSort, SelectionSort e InsertionSort.
+En este trabajo se implementó el algoritmo Quicksort en C\# en su versión original y una versión modificada junto con otros algoritmos clásicos de ordenamiento in-place BubbleSort, Flag BubbleSort, SelectionSort e InsertionSort.
 El objetivo principal fue comparar su rendimiento manteniendo una complejidad espacial de $O(1)$.
 Los resultados muestran que  el uso de la técnica de la mediana de tres en la versión optimizada del Quicksort mejora notablemente su estabilidad en arreglos previamente ordenados, evitando el peor caso de $O(n^2)$ y mejora ligeramente su rendimiento en arreglos desordenados.
 Además, entre los algoritmos in-place, Quicksort obtiene el mejor desempeño siempre que se utilice una estrategia adecuada para la selección del pivote.
@@ -70,12 +70,12 @@ Desde su primera publicación han habido diversas modificaciones con la intenci�
 Otras modificaciones se basan en mejores métodos para elegir en pivote y así reducir la complejidad en el peor caso, la más popular es usando el algoritmo de Singleton.\cite{history} 
 
 \subsection{Divide and Conquer}
-El Quicksort es un algoritmo que usa el paradigma de \textbf{Divide and Conquer}. 
+El Quicksort es un algoritmo que usa el paradigma de \textbf{Divide and Conquer}\cite{divide_and_conquer}. 
 Este tipo de solución implica dividir el problema en dos subproblemas independientes usando un pivote, 
 cada uno siendo aproximadamente la mitad del problema original, y resolver estos subproblemas respectivamente para finalmente unir ambos en la solución final.\par
 En muchas ocasiones estos subproblemas aplican de manera recursiva hasta llegar un caso base, en donde es trivial la respuesta y de ahí se van uniendo las subsoluciones hasta llegar a la solución final.
 Cuando la división es balanceada, este enfoque logra reducir el número de niveles de recursión a $\log{n}$ niveles de recursión.
-Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y la \textit{Transformada Rápida de Fourier}.\cite{divide_and_conquer}
+Otros algoritmos que ocupan este paradigma son la \textit{Búsqueda Binaria} y la \textit{Transformada Rápida de Fourier}.
 
 
 \subsection{Algoritmo}
@@ -158,9 +158,9 @@ calcular su mediana y usar eso como pivote.
 Esta técnica ayuda a que el quicksort pase de tener una complejidad del peor caso para arreglos ordenados al mejor caso, y también ayuda a siempre tener dos particiones de longitud distintas a cero.
 
 \subsection{Algoritmos de ordenamiento in-place}
-Quicksort es un algoritmo in-place, lo que significa que funciona haciendo intercambios sin hacer uso de estructuras de datos externas. Otros algoritmos que son in-place serían ambas versiones del Bubblesort, Insertion sort y el Selection sort.
+Quicksort es un algoritmo in-place\cite{space_complexity}, lo que significa que funciona haciendo intercambios sin hacer uso de estructuras de datos externas. Otros algoritmos que son in-place serían ambas versiones del Bubblesort, Insertion sort y el Selection sort.
 La gran ventaja de usar este paradigma es que la complejidad espacial del algoritmo es bastante baja, $\Theta(\log{n})$ en el mejor caso y caso promedio y $O(n)$ en el peor caso.
-Sin embargo, si hacemos uso de la técnica de la mediana de tres para escoger el pivote, nos aseguramos de tener una complejidad espacial logarítmica al tener los $\log{n}$ niveles.\cite{space_complexity}
+Sin embargo, si hacemos uso de la técnica de la mediana de tres para escoger el pivote, nos aseguramos de tener una complejidad espacial logarítmica al tener los $\log{n}$ niveles.
 
 \section{Metodología}
 Aquí debe describir los métodos, enfoques o procedimientos utilizados en su investigación.
@@ -168,6 +168,8 @@ Aquí debe describir los métodos, enfoques o procedimientos utilizados en su in
 \subsubsection{Quicksort}
 En esta primera implementación se recreó paso a paso el pseudocódigo mencionado anteriormente en C\#, donde el pivote escogido es el elemento de la derecha del arreglo/partición.
 La función principal quedó de la siguiente manera:
+
+%\inputminted[firstline=141, lastline=149, autogobble, stripall, stripnl]{csharp}{../Qsort/Class1.cs}
 
 \begin{minted}{csharp}
 void q_sort(int low, int high)
@@ -390,14 +392,14 @@ int[] n_array(int n)
 \subsection{Experimentos}
 \subsubsection{Quicksort vs Quicksort optimizado}
 Primeramente se compararon ambas implementaciones de Quicksort en arreglos ordenados y aleatorios de longitudes desde 10 hasta 1000 elementos.\par
-La elección de que el límite de longitud sea 1000 es para evitar el StackOverFlowException de C\# cuando la implementación no optimizada ordena arreglos ordenados.\par
+La elección de que el límite de longitud sea 1000 es para evitar el StackOverFlowException\cite{stackoverflowexception} de C\# cuando la implementación no optimizada ordena arreglos ordenados.\par
 Finalmente se guardaron los resultados en archivos csv para su posterior análisis.
 
 
 
 \subsubsection{Quicksort optimizado vs demás algoritmos}
 En el segundo experimento ahora se compararon las implementaciones del Quicksort optimizado, Bubblesort, Flag Bubblesort, Insertionsort y Selectionsort con arreglos tanto ordenados como desordenados.\par
-Para los arreglos ordenados las longitudes de las listas estuvieron en el rango de 100 a 50,000 elementos y para los arreglos desordenados los rangos variaron desde 100 hasta 10,000. Esta decisión se tomó para evitar saturar la computadora debido a la complejidad $O(n^2)$ de los demás algoritmos.\par
+Para los arreglos ordenados las longitudes de las listas estuvieron en el rango de 100 a 65536 elementos y para los arreglos desordenados los rangos variaron desde 100 hasta 16384 aumentando la longitud de manera logarítmica. Esta decisión se tomó para evitar saturar la computadora debido a la complejidad $O(n^2)$ de los demás algoritmos.\par
 Finalmente se guardaron los resultados en archivos csv para su posterior análisis.
 
 
@@ -441,29 +443,55 @@ Aquí el Insertion Sort y el Flag BubbleSort reducen su número de operaciones a
 
 \section{Conclusiones}
 
-Después de analizar estas distintas implementaciones hay 2 puntos importantes de mencionar:
+Primero es necesario ver en formato tabular las ventajas y desventajas de los algoritmos utilizados:
+\begin{table}[H]
+\caption{Comparativa de ventajas y desventajas de los algoritmos in-place implementados}
+\centering
+\small
+\begin{tabular}{|p{2cm}|p{2.6cm}|p{2.6cm}|}
+\hline
+\textbf{Algoritmo} & \textbf{Ventajas} & \textbf{Desventajas} \\
+\hline
+\textbf{Quicksort} & Complejidad baja en el caso promedio. & Peor caso $O(n^2)$ si el pivote se elige mal. \\
+\hline
+\textbf{Quicksort (mediana de tres)} & Evita el peor caso y da mayor estabilidad en arreglos ordenados. & Implementación ligeramente más compleja. \\
+\hline
+\textbf{InsertionSort} & Eficiente para listas ordenadas o casi ordenadas. & Complejidad promedio alta. \\
+\hline
+\textbf{SelectionSort} & Fácil de implementar. & Complejidad alta en todos los casos ($O(n^2)$). \\
+\hline
+\textbf{BubbleSort} & Fácil de implementar. & Complejidad alta en todos los casos ($O(n^2)$). \\
+\hline
+\textbf{Flag BubbleSort} & Eficiente para listas ordenadas. & Sigue siendo $O(n^2)$ en el caso promedio y peor. \\
+\hline
+\end{tabular}\label{tab:pros_contras}
+\end{table}
+
+
+Después de analizar estas distintas implementaciones hay 2 puntos importantes a mencionar:
 
 \begin{itemize}
     \item Escoger bien el pivote ayuda ligeramente en arreglos desordenados pero ayuda demasiado para arreglos ordenados y nos da una complejidad tanto temporal como espacial bastante más estable.
     \item De los algoritmos de ordenamiento in-place que se analizaron el quicksort es indiscutiblemente el ganador.
 \end{itemize}
 
-Sin embargo hay un dos preguntas que se podrían explorar a futuro:
+Sin embargo hay dos preguntas que se podrían explorar a futuro:
 \begin{itemize}
     \item ¿Hay alguna implementación que supere la complejidad temporal obtenida aquí revisando si el arreglo está previamente ordenado? 
     \item ¿qué otras técnicas para escoger el pivote existen y cuáles son sus respectivas complejidades?
 \end{itemize}
 
-El Quicksort es un algoritmo sumamente efectivo tanto en complejidad espacial como temporal, 
-es relativamente sencillo de implementar y es bastante flexible ya que acepta distintos tipos de datos como entrada; 
-haciéndolo una opción bastante sólida para diversas aplicaciones.
+El \textbf{Quicksort optimizado} demostró ser un algoritmo estable y altamente eficiente en complejidad temporal para casos prácticos, como se observa en la figura~\ref{fig:exp1B}, el cual corresponde al escenario más frecuente. 
+Aparte es relativamente sencillo de implementar, ya que no requiere estructuras de datos complejas,  y bastante flexible, debido a que acepta distintos tipos de datos como entrada,
+haciéndolo una opción bastante sólida para diversas aplicaciones en las que resulta conveniente emplear usar un algoritmo in-place.
 
 \bibliographystyle{IEEEtran}
 \bibliography{biblios}
 
 
 \appendices
-\section{Repositorio}
+\section{Repositorio del Proyecto}
+
 Para ver el repositorio completo de GitHub haga click \href{https://github.com/PabloNatB/Comparativa-Quicksort}{\textbf{aquí}}.
 
 %Algoritmos
